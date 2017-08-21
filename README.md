@@ -14,7 +14,7 @@ Local copies:
 *coming*
 
 ## Further Documentation
-* [ontology image](agrif-img.pdf)
+* [ontology image](agrif.png)
 * [AGRIF simplified presentation](AGRIF simplified.pptx)
 * [What is the Australian Government Records Interoperability Framework?](docs/What is the Australian Government Records Interoperability Framework.pdf)
 
@@ -42,7 +42,7 @@ Department of Finance
 Technical contact:  
 
 **Nicholas Car**
-*Data Architect*    
+*Data Architect*  
 Geoscience Australia  
 <nicholas.car@ga.gov.au>  
 <http://orcid.org/0000-0002-8742-7730>
