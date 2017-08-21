@@ -14,6 +14,7 @@ Local copies:
 *coming*
 
 ## Further Documentation
+* [ontology image](agrif-img.pdf)
 * [AGRIF simplified presentation](AGRIF simplified.pptx)
 * [What is the Australian Government Records Interoperability Framework?](docs/What is the Australian Government Records Interoperability Framework.pdf)
 
