@@ -15,11 +15,11 @@ Local copies:
 
 ## Further Documentation
 * [ontology image](agrif.png)
-* [AGRIF simplified presentation](AGRIF simplified.pptx)
-* [What is the Australian Government Records Interoperability Framework?](docs/What is the Australian Government Records Interoperability Framework.pdf)
+* [AGRIF simplified presentation](docs/AGRIF-simplified.pptx)
+* [What is the Australian Government Records Interoperability Framework?](docs/What-is-the-Australian-Government-Records-Interoperability-Framework.pdf)
 
 ## License
-This ontology and all other content in this repository are licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) (local copyof deed: [LICENSE](LICENSE)).
+This ontology and all other content in this repository are licensed under the [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) (local copy of deed: [LICENSE](LICENSE)).
 
 ## Contacts
 Ontology authors:  
