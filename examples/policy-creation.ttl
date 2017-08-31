@@ -1,0 +1,87 @@
+@prefix : <http://data.finance.gov.au/id/agrif/examplerecord#> .
+@prefix agrif: <http://data.finance.gov.au/def/agrif#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:C-PPP2008F-20080905 a :CreationEvent,
+        owl:NamedIndividual ;
+    :atTime "2008-09-05T15:05:05"^^xsd:dateTime ;
+    :wasAssociatedWith :Department_of_Planning ;
+    rdfs:comment "System log of creation event."@en .
+
+:C-PPP2017C-20170401 a :CreationEvent,
+        owl:NamedIndividual ;
+    :atTime "2017-04-01T11:00:15"^^xsd:dateTime ;
+    :wasAssociatedWith :Department_of_Planning ;
+    rdfs:comment "System log of creation event."@en .
+
+:C-PPP2017D-20170217 a :CreationEvent,
+        owl:NamedIndividual ;
+    :atTime "2017-02-17T17:33:02"^^xsd:dateTime ;
+    :wasAssociatedWith :Government_Orchestration_Agency ;
+    rdfs:comment "System log of creation event."@en .
+
+:C-PPP2017F-20170504 a :CreationEvent,
+        owl:NamedIndividual ;
+    :atTime "2017-05-04T13:05:45"^^xsd:dateTime ;
+    :wasAssociatedWith :Government_Orchestration_Agency ;
+    rdfs:comment "System log of creation event."@en .
+
+:Policy_and_Procedure_Policy_2008_Final a :Record,
+        owl:NamedIndividual ;
+    :associatedFunction :Policy_Review ;
+    :hasDisposalClass :RetainAsNationalArchives ;
+    :recordOf :Policy_and_Procedure_Policy_2008_Final_DOCX ;
+    rdfs:comment "Final and approved version of the Policy and Procedure Policy 2008."@en .
+
+:Comments_on_Policy_and_Procedure_Policy_2017_Draft a :Record,
+        owl:NamedIndividual ;
+    :associatedFunction :Policy_Review ;
+    :hasDisposalClass :RetainAsNationalArchives ;
+    :recordOf :Comments_on_Policy_and_Procedure_Policy_2017_Draft_EML ;
+    :relatedTo :Policy_and_Procedure_Policy_2017_Draft .
+
+:Comments_on_Policy_and_Procedure_Policy_2017_Draft_EML a :DigitalArtefact,
+        owl:NamedIndividual .
+
+:Policy_and_Procedure_Policy_2008_Final_DOCX a :DigitalArtefact,
+        owl:NamedIndividual .
+
+:Policy_and_Procedure_Policy_2017_Draft_DOCX a :DigitalArtefact,
+        owl:NamedIndividual .
+
+:Policy_and_Procedure_Policy_2017_Final a :Record,
+        owl:NamedIndividual ;
+    :associatedFunction :Policy_Review ;
+    :hasDisposalClass :RetainAsNationalArchives ;
+    :recordOf :Policy_and_Procedure_Policy_2017_Final_DOCX ;
+    :relatedTo :Policy_and_Procedure_Policy_2017_Draft ;
+    rdfs:comment "Final and approved version of the Policy and Procedure Policy 2017."@en .
+
+:Policy_and_Procedure_Policy_2017_Final_DOCX a :DigitalArtefact,
+        owl:NamedIndividual .
+
+:Department_of_Planning a :Organisation,
+        owl:NamedIndividual ;
+    :associatedFunction :Policy_Review .
+
+:Government_Orchestration_Agency a :Organisation,
+        owl:NamedIndividual ;
+    :associatedFunction :Policy_Review .
+
+:Policy_and_Procedure_Policy_2017_Draft a :Record,
+        owl:NamedIndividual ;
+    :associatedFunction :Policy_Review ;
+    :hasDisposalClass :RetainAsNationalArchives ;
+    :recordOf :Policy_and_Procedure_Policy_2017_Draft_DOCX ;
+    :relatedTo :Comments_on_Policy_and_Procedure_Policy_2017_Draft,
+        :Policy_and_Procedure_Policy_2017_Final ;
+    rdfs:comment "Consultation draft of the Policy and Procedure Policy 2017."@en .
+
+:Policy_Review a :Function,
+        owl:NamedIndividual ;
+    rdfs:comment "The function of government relating to review of the development of policy, and supporting procedures."@en .
+

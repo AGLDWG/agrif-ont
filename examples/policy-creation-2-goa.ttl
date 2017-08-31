@@ -1,0 +1,30 @@
+@prefix : <http://data.finance.gov.au/id/agrif/examplerecord#> .
+@prefix agrif: <http://data.finance.gov.au/def/agrif#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://governance.data.gov.au/id/dataset/goa/Comments_on_Policy_and_Procedure_Policy_2017_Draft> a :Record,
+        owl:NamedIndividual ;
+    :hasDisposalClass :RetainOnsite7Years ;
+    :isChangedBy <http://governance.data.gov.au/id/event/goa/C-PPP2017C-20170401> ;
+    :recordOf <http://governance.data.gov.au/id/dataset/goa/Comments_on_Policy_and_Procedure_Policy_2017_Draft_EML> ;
+    :relatedTo <http://governance.data.gov.au/id/dataset/dp/Policy_and_Procedure_Policy_2017_Draft> .
+
+<http://governance.data.gov.au/def/ont/org/Government_Orchestration_Agency> a :Organisation,
+        owl:NamedIndividual .
+
+<http://governance.data.gov.au/id/dataset/goa/Comments_on_Policy_and_Procedure_Policy_2017_Draft_EML> a :DigitalArtefact,
+        owl:NamedIndividual ;
+    :storedIn <http://governance.data.gov.au/id/system/goa/Gov_Orch_Ag_SharePoint> .
+
+<http://governance.data.gov.au/id/event/goa/C-PPP2017C-20170401> a :CreationEvent,
+        owl:NamedIndividual ;
+    :atTime "2017-04-01T11:00:15"^^xsd:dateTime ;
+    :wasAssociatedWith <http://governance.data.gov.au/def/ont/org/Government_Orchestration_Agency> ;
+    rdfs:comment "System log of creation event."@en .
+
+<http://governance.data.gov.au/id/system/goa/Gov_Orch_Ag_SharePoint> a :InformationSystem,
+        owl:NamedIndividual .
