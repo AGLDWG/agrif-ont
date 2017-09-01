@@ -6,64 +6,80 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://governance.data.gov.au/id/dataset/dp/Policy_and_Procedure_Policy_2017_Final> a :Record,
+@prefix agrif-org: <http://governance.data.gov.au/id/org/> .
+@prefix dp-data: <http://governance.data.gov.au/id/dataset/dp/> .
+@prefix dp-system: <http://governance.data.gov.au/id/system/dp/> .
+@prefix event: <http://governance.data.gov.au/id/event/> .
+
+dp-data:Policy_and_Procedure_Policy_2017_Final a :Record,
         owl:NamedIndividual ;
     :hasDisposalClass :RetainAsNationalArchives ;
-    :isChangedBy <http://governance.data.gov.au/id/event/C-PPP2017F-20170504> ;
-    :recordOf <http://governance.data.gov.au/id/dataset/dp/Policy_and_Procedure_Policy_2017_Final_DOCX> ;
-    :relatedTo <http://governance.data.gov.au/id/dataset/dp/Policy_and_Procedure_Policy_2017_Draft> ;
+    :isChangedBy event:C-PPP2017F-20170504 ;
+    :recordOf dp-data:Policy_and_Procedure_Policy_2017_Final_DOCX ;
+    :relatedTo dp-data:Policy_and_Procedure_Policy_2017_Draft,
+        <http://governance.data.gov.au/id/dataset/goa/Comments_on_Policy_and_Procedure_Policy_2017_Draft> ;
     rdfs:comment "Final and approved version of the Policy and Procedure Policy 2017."@en .
 
-<http://governance.data.gov.au/id/dataset/dp/Policy_and_Procedure_Policy_2008_Final> a :Record,
+dp-data:Policy_and_Procedure_Policy_2008_Final a :Record,
         owl:NamedIndividual ;
     :hasDisposalClass :RetainAsNationalArchives ;
-    :isChangedBy <http://governance.data.gov.au/id/event/C-PPP2008F-20080905> ;
-    :recordOf <http://governance.data.gov.au/id/dataset/dp/Policy_and_Procedure_Policy_2008_Final_DOCX> ;
+    :isChangedBy event:C-PPP2008F-20080905 ;
+    :recordOf dp-data:Policy_and_Procedure_Policy_2008_Final_DOCX ;
     rdfs:comment "Final and approved version of the Policy and Procedure Policy 2008."@en .
 
-<http://governance.data.gov.au/id/dataset/dp/Policy_and_Procedure_Policy_2008_Final_DOCX> a :DigitalArtefact,
+dp-data:Policy_and_Procedure_Policy_2008_Final_DOCX a :DigitalArtifact,
         owl:NamedIndividual ;
-    :storedIn <http://governance.data.gov.au/id/system/dp/NAA_Data_Vault> .
+    :storedIn dp-system:NAA_Data_Vault .
 
-<http://governance.data.gov.au/id/dataset/dp/Policy_and_Procedure_Policy_2017_Draft> a :Record,
+dp-data:Policy_and_Procedure_Policy_2017_Draft a :Record,
         owl:NamedIndividual ;
     :hasDisposalClass :RetainOnsite7Years ;
-    :isChangedBy <http://governance.data.gov.au/id/event/C-PPP2017D-20170217> ;
-    :recordOf <http://governance.data.gov.au/id/dataset/dp/Policy_and_Procedure_Policy_2017_Draft_DOCX> ;
-    :relatedTo <http://governance.data.gov.au/id/dataset/dp/Policy_and_Procedure_Policy_2008_Final> ;
+    :isChangedBy event:C-PPP2017D-20170217 ;
+    :recordOf dp-data:Policy_and_Procedure_Policy_2017_Draft_DOCX,
+        dp-data:Policy_and_Procedure_Policy_2017_Final_Appendix_A_DOCX,
+        dp-data:Policy_and_Procedure_Policy_2017_Final_PDF ;
+    :relatedTo dp-data:Policy_and_Procedure_Policy_2008_Final ;
     rdfs:comment "Consultation draft of the Policy and Procedure Policy 2017."@en .
 
-<http://governance.data.gov.au/id/dataset/dp/Policy_and_Procedure_Policy_2017_Draft_DOCX> a :DigitalArtefact,
+dp-data:Policy_and_Procedure_Policy_2017_Draft_DOCX a :DigitalArtifact,
         owl:NamedIndividual ;
-    :storedIn <http://governance.data.gov.au/id/system/dp/Dept_Planning_HPRM> .
+    :storedIn dp-system:Dept_Planning_SharePoint .
 
-<http://governance.data.gov.au/id/dataset/dp/Policy_and_Procedure_Policy_2017_Final_DOCX> a :DigitalArtefact,
+dp-data:Policy_and_Procedure_Policy_2017_Final_Appendix_A_DOCX a :DigitalArtifact,
         owl:NamedIndividual ;
-    :storedIn <http://governance.data.gov.au/id/system/dp/NAA_Data_Vault> .
+    :storedIn dp-system:NAA_Data_Vault .
 
-<http://governance.data.gov.au/id/event/C-PPP2008F-20080905> a :CreationEvent,
+dp-data:Policy_and_Procedure_Policy_2017_Final_DOCX a :DigitalArtifact,
+        owl:NamedIndividual ;
+    :storedIn dp-system:NAA_Data_Vault .
+
+dp-data:Policy_and_Procedure_Policy_2017_Final_PDF a :DigitalArtifact,
+        owl:NamedIndividual ;
+    :storedIn dp-system:NAA_Data_Vault .
+
+event:C-PPP2008F-20080905 a :CreationEvent,
         owl:NamedIndividual ;
     :atTime "2008-09-05T15:05:05"^^xsd:dateTime ;
-    :wasAssociatedWith <http://governance.data.gov.au/def/ont/org/Department_of_Planning> ;
+    :wasAssociatedWith agrif-org:Department_of_Planning ;
     rdfs:comment "System log of creation event."@en .
 
-<http://governance.data.gov.au/id/event/C-PPP2017D-20170217> a :CreationEvent,
+event:C-PPP2017D-20170217 a :CreationEvent,
         owl:NamedIndividual ;
     :atTime "2017-02-17T17:33:02"^^xsd:dateTime ;
-    :wasAssociatedWith <http://governance.data.gov.au/def/ont/org/Department_of_Planning> ;
+    :wasAssociatedWith agrif-org:Department_of_Planning ;
     rdfs:comment "System log of creation event."@en .
 
-<http://governance.data.gov.au/id/event/C-PPP2017F-20170504> a :CreationEvent,
+event:C-PPP2017F-20170504 a :CreationEvent,
         owl:NamedIndividual ;
     :atTime "2017-05-04T13:05:45"^^xsd:dateTime ;
-    :wasAssociatedWith <http://governance.data.gov.au/def/ont/org/Department_of_Planning> ;
+    :wasAssociatedWith agrif-org:Department_of_Planning ;
     rdfs:comment "System log of creation event."@en .
 
-<http://governance.data.gov.au/id/system/dp/Dept_Planning_HPRM> a :InformationSystem,
+dp-system:Dept_Planning_SharePoint a :InformationSystem,
         owl:NamedIndividual .
 
-<http://governance.data.gov.au/id/system/dp/NAA_Data_Vault> a :InformationSystem,
+agrif-org:Department_of_Planning a :Organisation,
         owl:NamedIndividual .
 
-<http://governance.data.gov.au/def/ont/org/Department_of_Planning> a :Organisation,
+dp-system:NAA_Data_Vault a :InformationSystem,
         owl:NamedIndividual .

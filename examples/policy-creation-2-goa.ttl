@@ -6,25 +6,30 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://governance.data.gov.au/id/dataset/goa/Comments_on_Policy_and_Procedure_Policy_2017_Draft> a :Record,
+@prefix agrif-org: <http://governance.data.gov.au/id/org/> .
+@prefix goa-data: <http://governance.data.gov.au/id/dataset/goa/> .
+@prefix goa-system: <http://governance.data.gov.au/id/system/goa/> .
+@prefix event: <http://governance.data.gov.au/id/event/> .
+
+goa-data:Comments_on_Policy_and_Procedure_Policy_2017_Draft a :Record,
         owl:NamedIndividual ;
     :hasDisposalClass :RetainOnsite7Years ;
-    :isChangedBy <http://governance.data.gov.au/id/event/goa/C-PPP2017C-20170401> ;
-    :recordOf <http://governance.data.gov.au/id/dataset/goa/Comments_on_Policy_and_Procedure_Policy_2017_Draft_EML> ;
+    :isChangedBy event:C-PPP2017C-20170401 ;
+    :recordOf goa-data:Comments_on_Policy_and_Procedure_Policy_2017_Draft_EML ;
     :relatedTo <http://governance.data.gov.au/id/dataset/dp/Policy_and_Procedure_Policy_2017_Draft> .
 
-<http://governance.data.gov.au/def/ont/org/Government_Orchestration_Agency> a :Organisation,
-        owl:NamedIndividual .
-
-<http://governance.data.gov.au/id/dataset/goa/Comments_on_Policy_and_Procedure_Policy_2017_Draft_EML> a :DigitalArtefact,
+goa-data:Comments_on_Policy_and_Procedure_Policy_2017_Draft_EML a :DigitalArtifact,
         owl:NamedIndividual ;
-    :storedIn <http://governance.data.gov.au/id/system/goa/Gov_Orch_Ag_SharePoint> .
+    :storedIn goa-system:Gov_Orch_Ag_HPRM .
 
-<http://governance.data.gov.au/id/event/goa/C-PPP2017C-20170401> a :CreationEvent,
+event:C-PPP2017C-20170401 a :CreationEvent,
         owl:NamedIndividual ;
     :atTime "2017-04-01T11:00:15"^^xsd:dateTime ;
-    :wasAssociatedWith <http://governance.data.gov.au/def/ont/org/Government_Orchestration_Agency> ;
+    :wasAssociatedWith agrif-org:Government_Orchestration_Agency ;
     rdfs:comment "System log of creation event."@en .
 
-<http://governance.data.gov.au/id/system/goa/Gov_Orch_Ag_SharePoint> a :InformationSystem,
+agrif-org:Government_Orchestration_Agency a :Organisation,
+        owl:NamedIndividual .
+
+goa-system:Gov_Orch_Ag_HPRM a :InformationSystem,
         owl:NamedIndividual .
