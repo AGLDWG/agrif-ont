@@ -11,7 +11,7 @@ Things to do in order to create an HTML version of the ontology
     * remove any leading spaces in doc
     * remove <?xml version="1.0" encoding="UTF-8"?>
     * add <!DOCTYPE html>
-    * add lang="en" to <html> tag
+    * add lang="en" to <html> tag, remove xmlns attribute
     * remove 2x <title> in <head>
     * replace a name= with a id=
 
@@ -19,19 +19,18 @@ Things to do in order to create an HTML version of the ontology
     (<a href="http://www.essepuntato.it/lode/owlapi/http://promsns.org/def/ro">visualise it with LODE</a>)
 
 * change ontology source to use the namespace link:
-    <dd><a href="http://eelst.cs.unibo.it/apps/LODE/source?url=http://www.essepuntato.it/tmp/1487156869-ontology">Ontology source</a></dd> --> <dd><a href="http://pid.geoscience.gov.au/def/ont/link.ttl">Ontology source</a></dd>
+    <dd><a href="http://eelst.cs.unibo.it/apps/LODE/source?url=http://www.essepuntato.it/tmp/1487156869-ontology">Ontology source</a></dd> --> <dd><a href="http://reference.data.gov.au/def/ont/agrif.ttl">Ontology source</a></dd>
 
 * change external JS, CSS & favicon links to local:
     * http://eelst.cs.unibo.it/apps/LODE/ --> /static/
 
-* change favicon:
-    * <link rel="shortcut icon" href="http://eelst.cs.unibo.it/apps/LODE/favicon.ico" /> --> <link rel="shortcut icon" href="/static/favicon.ico" />
+* line separate JS tags
 
 * add links to repository documentation
     * add
 			<dl>
 				<dt>Further documentation & examples:</dt>
-				<dd><a href="http://github.com/nicholascar/dmn-ont">This ontology on GitHub</a></dd>
+				<dd><a href="http://github.com/AGLDWG/agrif-ont">This ontology on GitHub</a></dd>
 			</dl>
 	after:
 			<dl>
@@ -42,6 +41,6 @@ Things to do in order to create an HTML version of the ontology
 * add ontology image
 	* after ToC, add
 	<div id="img">
-		<img src="agrif-img.pdf" alt="Image of all AGRIF classes">
+		<img src="agrif.png" alt="Image of all AGRIF classes">
 		<p><em>All of the AGRIF classes and their relationships</em></p>
 	</div>
