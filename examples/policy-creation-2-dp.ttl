@@ -14,7 +14,9 @@ dp-data:Policy_and_Procedure_Policy_2017_Final a :Record,
         owl:NamedIndividual ;
     :hasDisposalClass :RetainAsNationalArchives ;
     :isChangedBy event:C-PPP2017F-20170504 ;
-    :recordOf dp-data:Policy_and_Procedure_Policy_2017_Final_DOCX ;
+    :recordOf dp-data:Policy_and_Procedure_Policy_2017_Final_DOCX,
+        dp-data:Policy_and_Procedure_Policy_2017_Final_Appendix_A_DOCX,
+        dp-data:Policy_and_Procedure_Policy_2017_Final_PDF ;
     :relatedTo dp-data:Policy_and_Procedure_Policy_2017_Draft,
         <http://governance.data.gov.au/id/dataset/goa/Comments_on_Policy_and_Procedure_Policy_2017_Draft> ;
     rdfs:comment "Final and approved version of the Policy and Procedure Policy 2017."@en .
@@ -26,35 +28,33 @@ dp-data:Policy_and_Procedure_Policy_2008_Final a :Record,
     :recordOf dp-data:Policy_and_Procedure_Policy_2008_Final_DOCX ;
     rdfs:comment "Final and approved version of the Policy and Procedure Policy 2008."@en .
 
-dp-data:Policy_and_Procedure_Policy_2008_Final_DOCX a :DigitalArtifact,
+dp-data:Policy_and_Procedure_Policy_2008_Final_DOCX a :DigitalArtefact,
         owl:NamedIndividual ;
-    :storedIn dp-system:NAA_Data_Vault .
+    :storedIn <http://governance.data.gov.au/id/system/naa/Vault> .
 
 dp-data:Policy_and_Procedure_Policy_2017_Draft a :Record,
         owl:NamedIndividual ;
     :hasDisposalClass :RetainOnsite7Years ;
     :isChangedBy event:C-PPP2017D-20170217 ;
-    :recordOf dp-data:Policy_and_Procedure_Policy_2017_Draft_DOCX,
-        dp-data:Policy_and_Procedure_Policy_2017_Final_Appendix_A_DOCX,
-        dp-data:Policy_and_Procedure_Policy_2017_Final_PDF ;
+    :recordOf dp-data:Policy_and_Procedure_Policy_2017_Draft_DOCX ;
     :relatedTo dp-data:Policy_and_Procedure_Policy_2008_Final ;
     rdfs:comment "Consultation draft of the Policy and Procedure Policy 2017."@en .
 
-dp-data:Policy_and_Procedure_Policy_2017_Draft_DOCX a :DigitalArtifact,
+dp-data:Policy_and_Procedure_Policy_2017_Draft_DOCX a :DigitalArtefact,
         owl:NamedIndividual ;
     :storedIn dp-system:Dept_Planning_SharePoint .
 
-dp-data:Policy_and_Procedure_Policy_2017_Final_Appendix_A_DOCX a :DigitalArtifact,
+dp-data:Policy_and_Procedure_Policy_2017_Final_Appendix_A_DOCX a :DigitalArtefact,
         owl:NamedIndividual ;
-    :storedIn dp-system:NAA_Data_Vault .
+    :storedIn <http://governance.data.gov.au/id/system/naa/Vault> .
 
-dp-data:Policy_and_Procedure_Policy_2017_Final_DOCX a :DigitalArtifact,
+dp-data:Policy_and_Procedure_Policy_2017_Final_DOCX a :DigitalArtefact,
         owl:NamedIndividual ;
-    :storedIn dp-system:NAA_Data_Vault .
+    :storedIn <http://governance.data.gov.au/id/system/naa/Vault> .
 
-dp-data:Policy_and_Procedure_Policy_2017_Final_PDF a :DigitalArtifact,
+dp-data:Policy_and_Procedure_Policy_2017_Final_PDF a :DigitalArtefact,
         owl:NamedIndividual ;
-    :storedIn dp-system:NAA_Data_Vault .
+    :storedIn dp-system:Dept_Planning_SharePoint .
 
 event:C-PPP2008F-20080905 a :CreationEvent,
         owl:NamedIndividual ;
@@ -80,5 +80,5 @@ dp-system:Dept_Planning_SharePoint a :InformationSystem,
 agrif-org:Department_of_Planning a :Organisation,
         owl:NamedIndividual .
 
-dp-system:NAA_Data_Vault a :InformationSystem,
+<http://governance.data.gov.au/id/system/naa/Vault> a :InformationSystem,
         owl:NamedIndividual .

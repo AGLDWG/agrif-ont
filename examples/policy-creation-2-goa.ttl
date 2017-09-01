@@ -17,7 +17,7 @@ goa-data:Comments_on_Policy_and_Procedure_Policy_2017_Draft a :Record,
     :recordOf goa-data:Comments_on_Policy_and_Procedure_Policy_2017_Draft_EML ;
     :relatedTo <http://governance.data.gov.au/id/dataset/dp/Policy_and_Procedure_Policy_2017_Draft> .
 
-goa-data:Comments_on_Policy_and_Procedure_Policy_2017_Draft_EML a :DigitalArtifact,
+goa-data:Comments_on_Policy_and_Procedure_Policy_2017_Draft_EML a :DigitalArtefact,
         owl:NamedIndividual ;
     :storedIn goa-system:Gov_Orch_Ag_HPRM .
 
