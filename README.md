@@ -3,8 +3,8 @@ The Australian Government Records Interoperability Framework (AGRIF) Ontology is
 
 ## Ontology document
 Namespace location:
-* HTML: <http://reference.data.gov.au/def/ont/agrif>
-* RDF turtle: <http://reference.data.gov.au/def/ont/agrif.ttl>
+* HTML: <http://linked.data.gov.au/def/agrif>
+* RDF turtle: <http://linked.data.gov.au/def/agrif.ttl>
 
 Local copies:
 * HTML: [agrif.html](agrif.ttl)
