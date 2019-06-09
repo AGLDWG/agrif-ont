@@ -41,8 +41,8 @@ Department of Finance
 
 Technical contact:  
 
-**Nicholas Car**
+**Nicholas Car**  
 *Senior Experimental Scientist*  
-CSIRO, Environmental Informatics Group
+CSIRO, Environmental Informatics Group  
 <nicholas.car@csiro.au>  
 <http://orcid.org/0000-0002-8742-7730>
