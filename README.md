@@ -2,16 +2,14 @@
 The Australian Government Records Interoperability Framework (AGRIF) Ontology is a system of related semantic ontologies that describe the structure, functions, and activities of the Australian Government, providing sufficient context for the effective use – including but not limited to management – of Australian Government information assets.
 
 ## Ontology document
-Namespace location:
+Namespace location:  
 * HTML: <http://linked.data.gov.au/def/agrif>
 * RDF turtle: <http://linked.data.gov.au/def/agrif.ttl>
 
-Local copies:
-* HTML: [agrif.html](agrif.ttl)
+Local copies:  
+* HTML: [agrif.html](agrif.html)
 * RDF Turtle: [agrif.ttl](agrif.ttl)
-
-## Examples
-*coming*
+* Markdown: [agrif.md](agrif.md]
 
 ## Further Documentation
 * [ontology image](agrif.png)
@@ -42,7 +40,7 @@ Department of Finance
 Technical contact:  
 
 **Nicholas Car**  
-*Senior Experimental Scientist*  
-CSIRO, Environmental Informatics Group  
-<nicholas.car@csiro.au>  
+*Data Systems Architect*  
+SURROUND Australia Pty Ltd   
+<nicholas.car@surroundaustralia.com>  
 <http://orcid.org/0000-0002-8742-7730>
