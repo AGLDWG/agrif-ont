@@ -9,7 +9,7 @@ Namespace location:
 Local copies:  
 * HTML: [agrif.html](agrif.html)
 * RDF Turtle: [agrif.ttl](agrif.ttl)
-* Markdown: [agrif.md](agrif.md]
+* Markdown: [agrif.md](agrif.md)
 
 ## Further Documentation
 * [ontology image](agrif.png)
