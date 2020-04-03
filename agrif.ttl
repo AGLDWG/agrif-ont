@@ -43,6 +43,7 @@
                                       rdfs:seeAlso <https://github.com/agldwg/agrif-ont> ;
                                       dcterms:modified "2020-04-03"@en ;
                                       dcterms:rights "(c) Commonwealth of Australia (Department of Finance) 2017"@en ;
+                                      dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
                                       dcterms:created "2016-12-06"^^xsd:date ;
                                       prov:wasGeneratedBy [
                                           a doap:Project ;
