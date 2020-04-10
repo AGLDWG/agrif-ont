@@ -172,11 +172,6 @@ code {
     "@type": [
       "https://schema.org/DefinedTermSet"
     ],
-    "https://schema.org/codeRepository": [
-      {
-        "@id": "https://github.com/AGLDWG/agrif-ont"
-      }
-    ],
     "https://schema.org/description": [
       {
         "@value": "<p>The Australian Government Records Interoperability Framework (AGRIF, ‘the Framework’) is a system of related semantic ontologies that describe the structure, functions, and activities of the Australian Government, providing sufficient context for the effective use – including but not limited to management – of Australian Government information assets. It complies with the World Wide Web Consortium’s Web Ontology Language (OWL2) Recommendation and makes reference to other Recommendations and existing domain ontologies for archival and preservation processes.</p>"
@@ -194,7 +189,7 @@ code {
     ],
     "https://schema.org/rights": [
       {
-        "@value": "(c) Commonwealth of Australia (Department of Finance) 2017"
+        "@value": "(c) Commonwealth of Australia (Department of Finance) 2019"
       }
     ]
   }
@@ -211,33 +206,34 @@ code {
         <dd><code>http://linked.data.gov.au/def/agrif</code></dd>
         <dt>Publisher(s)</dt>
         <dd>
-            <a href="http://linked.data.gov.au/org/finance">Department of Finance</a><br/>
+            Department of Finance<br/>
         </dd>
         <dt>Creator(s)</dt>
         <dd>
-            Katherine Stuart of <a href="http://linked.data.gov.au/org/finance">Department of Finance</a><br/>
-            John Machin of <a href="http://linked.data.gov.au/org/finance">Department of Finance</a><br/>
-            <a href="https://orcid.org/0000-0003-3425-0780">Armin Haller</a> (<a href="mailto:armin.haller@anu.edu.au">armin.haller@anu.edu.au</a>) of <a href="http://linked.data.gov.au/org/anu">Australian National University</a><br/>
+            John Machin of <a href="https://www.finance.gov.au">Department of Finance</a><br/>
+            Katherine Stuart of <a href="https://www.finance.gov.au">Department of Finance</a><br/>
+            <a href="http://orcid.org/0000-0003-3425-0780">Armin Haller</a> (<a href="mailto:armin.haller@anu.edu.au">armin.haller@anu.edu.au</a>) of <a href="https://www.anu.edu.au">Australian National University</a><br/>
         </dd>
         <dt>Contributors(s)</dt>
         <dd>
-            <a href="http://orcid.org/0000-0002-8742-7730">Nicholas Car</a> (<a href="mailto:nicholas.car@surroundaustralia.com">nicholas.car@surroundaustralia.com</a>) of <a href="https://surroundaustralia.com">SURROUND Australia Pty Ltd</a><br/>
+            Pouya Ghiasnezhad Omran<br/>
+            Kerry Taylor<br/>
+            <a href="http://orcid.org/0000-0002-8742-7730">Nicholas J. Car</a> (<a href="mailto:nicholas.car@surroundaustralia.com">nicholas.car@surroundaustralia.com</a>)<br/>
+            Sergio José Rodríguez Méndez<br/>
         </dd>
         <dt>Created</dt>
         <dd>2016-12-06</dd>
         <dt>Modified</dt>
-        <dd>2020-04-03</dd>
+        <dd>2019-10-21</dd>
         <dt>Version Information</dt>
-        <dd>0.71</dd>
+        <dd>0.9</dd>
         <dt>License &amp; Rights</dt>
         <dd>
             <a href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</a><br />
-            (c) Commonwealth of Australia (Department of Finance) 2017
+            (c) Commonwealth of Australia (Department of Finance) 2019
         </dd>
         <dt>Ontology RDF</dt>
         <dd><a href="agrif.ttl">RDF (turtle)</a></dd>
-        <dt>Code Repository</dt>
-        <dd><a href="https://github.com/AGLDWG/agrif-ont">https://github.com/AGLDWG/agrif-ont</a></dd>
     </dl>
     <h2>Description</h2>
     <div id="description">
@@ -251,6 +247,7 @@ code {
         <li><a href="#objectproperties">Object Properties</a></li>
         <li><a href="#datatypeproperties">Datatype Properties</a></li>
         <li><a href="#annotationproperties">Annotation Properties</a></li>
+        <li><a href="#namedindividuals">Named Individuals</a></li>
         <li><a href="#namespaces">Namespaces</a></li>
         <li><a href="#legend">Legend</a></li>
     </ol>
@@ -258,7 +255,7 @@ code {
 <section id="overview">
     <h2>Overview</h2>
     <div class="figure">
-        <a href="agrif.png"><img src="agrif.png" title="AGRIF ontology diagram" style="width:800px;" /></a>
+        <a href="agrif.png"><img src="agrif.png" title="AGRIF ontology diagram" style="width:1000px;" /></a>
         <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
     </div>
 </section>
@@ -273,33 +270,33 @@ code {
         <li><a href="#Administrator">Administrator</a></li>
         <li><a href="#Agent">Agent</a></li>
         <li><a href="#Artefact">Artefact</a></li>
+        <li><a href="#ArtefactChangeEvent">Artefact Change Event</a></li>
+        <li><a href="#ArtefactControlEvent">Artefact Control Event</a></li>
+        <li><a href="#ArtefactPublishEvent">Artefact Publish Event</a></li>
+        <li><a href="#ArtefactSendEvent">Artefact Send Event</a></li>
+        <li><a href="#ArtefactShareEvent">Artefact Share Event</a></li>
         <li><a href="#Association">Association</a></li>
-        <li><a href="#AuditEvent">Audit Event</a></li>
         <li><a href="#BusinessOwner">Business Owner</a></li>
         <li><a href="#Classifier">Classifier</a></li>
+        <li><a href="#Collection">Collection</a></li>
         <li><a href="#Control">Control</a></li>
-        <li><a href="#ControlEvent">Control Event</a></li>
         <li><a href="#ControlledVocabulary">Controlled Vocabulary</a></li>
         <li><a href="#Coverage">Coverage</a></li>
-        <li><a href="#CreationEvent">Creation Event</a></li>
         <li><a href="#Creator">Creator</a></li>
-        <li><a href="#DecisionEvent">Decision Event</a></li>
         <li><a href="#DecisionStatus">Decision Status</a></li>
-        <li><a href="#DestroyEvent">Destroy Event</a></li>
         <li><a href="#DigitalArtefact">Digital Artefact</a></li>
         <li><a href="#DigitalHoldingSpace">Digital Holding Space</a></li>
         <li><a href="#DigitalPreservationPolicy">Digital Preservation Policy</a></li>
         <li><a href="#DisposalClass">Disposal Class</a></li>
-        <li><a href="#DisposalEvent">Disposal Event</a></li>
         <li><a href="#Event">Event</a></li>
         <li><a href="#FormFactor">Form Factor</a></li>
-        <li><a href="#FreezeEvent">Freeze Event</a></li>
         <li><a href="#Function">Function</a></li>
         <li><a href="#HoldingSpace">Holding Space</a></li>
         <li><a href="#InformationManagementPolicy">Information Management Policy</a></li>
         <li><a href="#InformationSystem">Information System</a></li>
         <li><a href="#IntellectualControlSystem">Intellectual Control System</a></li>
         <li><a href="#JurisdictionalCoverage">Jurisdictional Coverage</a></li>
+        <li><a href="#LogicalCollection">Logical Collection</a></li>
         <li><a href="#MaintainActivity">Maintain Activity</a></li>
         <li><a href="#Manifest">Manifest</a></li>
         <li><a href="#MinimumMetadataSetPolicy">Minimum Metadata Set Policy</a></li>
@@ -308,30 +305,37 @@ code {
         <li><a href="#Permission">Permission</a></li>
         <li><a href="#Person">Person</a></li>
         <li><a href="#PhysicalArtefact">Physical Artefact</a></li>
+        <li><a href="#PhysicalCollection">Physical Collection</a></li>
         <li><a href="#PhysicalHoldingSpace">Physical Holding Space</a></li>
         <li><a href="#Policy">Policy</a></li>
         <li><a href="#PreservationQuality">Preservation Quality</a></li>
         <li><a href="#Quality">Quality</a></li>
         <li><a href="#Record">Record</a></li>
+        <li><a href="#RecordAuditEvent">Record Audit Event</a></li>
+        <li><a href="#RecordControlEvent">Record Control Event</a></li>
+        <li><a href="#RecordCreationEvent">Record Creation Event</a></li>
+        <li><a href="#RecordDecisionEvent">Record Decision Event</a></li>
+        <li><a href="#RecordDestructionEvent">Record Destruction Event</a></li>
+        <li><a href="#RecordDisposalEvent">Record Disposal Event</a></li>
+        <li><a href="#RecordFreezeEvent">Record Freeze Event</a></li>
+        <li><a href="#RecordReplacementEvent">Record Replacement Event</a></li>
+        <li><a href="#RecordSentencingEvent">Record Sentencing Event</a></li>
         <li><a href="#RecordStorageStandard">Record Storage Standard</a></li>
+        <li><a href="#RecordTransferEvent">Record Transfer Event</a></li>
         <li><a href="#RecordsAuthorityDisposalClassPolicy">Records Authority Disposal Class Policy</a></li>
         <li><a href="#RecordsAuthorityFunction">Records Authority Function</a></li>
-        <li><a href="#ReplaceEvent">Replace Event</a></li>
         <li><a href="#Role">Role</a></li>
         <li><a href="#SecurityClassification">Security Classification</a></li>
         <li><a href="#SecurityControl">Security Control</a></li>
-        <li><a href="#SentencingEvent">Sentencing Event</a></li>
         <li><a href="#Series">Series</a></li>
         <li><a href="#ShareActivity">Share Activity</a></li>
         <li><a href="#SpatialCoverage">Spatial Coverage</a></li>
         <li><a href="#SpatialLocation">Spatial Location</a></li>
         <li><a href="#Status">Status</a></li>
         <li><a href="#TemporalCoverage">Temporal Coverage</a></li>
-        <li><a href="#TransferEvent">Transfer Event</a></li>
         <li><a href="#Trigger">Trigger</a></li>
         <li><a href="#User">User</a></li>
         <li><a href="#VersionHistory">Version History</a></li>
-        <li><a href="#VocabularyEncodingScheme">VocabularyEncodingScheme</a></li>
     </ul>
     <div class="entity class" id="AGIFTFunction">
         <h3>AGIFT Function<sup title="class" class="sup-c">c</sup></h3>
@@ -339,6 +343,12 @@ code {
             <tr>
                 <th>IRI</th>
                 <td><code>http://linked.data.gov.au/def/agrif#AGIFTFunction</code></td>
+            </tr>
+            <tr>
+                <th>Is Defined By</th>
+                <td>
+                    https://data.naa.gov.au/def/agift/
+                </td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -376,8 +386,8 @@ code {
             <tr>
                 <th>Restrictions</th>
                 <td>
+                    <a href="#triggers">triggers</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#AccessTrigger">AccessTrigger</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#accessedBy">accessedBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Agent">Agent</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#triggers">triggers</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#AccessTrigger">AccessTrigger</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -438,6 +448,12 @@ code {
                 <td><code>http://linked.data.gov.au/def/agrif#Activity</code></td>
             </tr>
             <tr>
+                <th>Source</th>
+                <td>
+                    <a href="https://www.w3.org/TR/prov-o/#Activity">https://www.w3.org/TR/prov-o/#Activity</a>
+                </td>
+            </tr>
+            <tr>
                 <th>Description</th>
                 <td>
                     An Activity is something that occurs over a period of time on a Record.
@@ -446,23 +462,24 @@ code {
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#usedRecord">usedRecord</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Record">Record</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#guidingPolicy">guidingPolicy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Policy">Policy</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#qualifiedAssociation">qualifiedAssociation</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Association">Association</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#hasLocation">hasLocation</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#SpatialLocation">SpatialLocation</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#hasStatus">hasStatus</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Status">Status</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#requiresSecurityClassification">requiresSecurityClassification</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#SecurityClassification">SecurityClassification</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#wasAssociatedWith">wasAssociatedWith</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Agent">Agent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#requiresSecurityClassification">requiresSecurityClassification</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#SecurityClassification">SecurityClassification</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasStatus">hasStatus</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Status">Status</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#usedRecord">usedRecord</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Record">Record</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#associatedFunction">associatedFunction</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Function">Function</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasLocation">hasLocation</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#SpatialLocation">SpatialLocation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#qualifiedAssociation">qualifiedAssociation</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Association">Association</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#guidingPolicy">guidingPolicy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Policy">Policy</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#endedAtTime">endedAtTime</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#startedAtTime">startedAtTime</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#MaintainActivity">MaintainActivity</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#AccessActivity">AccessActivity</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#ShareActivity">ShareActivity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#MaintainActivity">MaintainActivity</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -496,6 +513,12 @@ code {
                 <td><code>http://linked.data.gov.au/def/agrif#Agent</code></td>
             </tr>
             <tr>
+                <th>Source</th>
+                <td>
+                    <a href="https://www.w3.org/TR/prov-o/#Agent">https://www.w3.org/TR/prov-o/#Agent</a>
+                </td>
+            </tr>
+            <tr>
                 <th>Description</th>
                 <td>
                     An Agent is a corporate entity, organisational element or system, or individual responsible for the performance of some Activity or Event, including those on Records.
@@ -505,15 +528,15 @@ code {
                 <th>Restrictions</th>
                 <td>
                     <a href="#hasPermission">hasPermission</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Permission">Permission</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#positionIn">positionIn</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Organisation">Organisation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#actsAs">actsAs</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Role">Role</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#positionIn">positionIn</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Organisation">Organisation</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#Organisation">Organisation</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#Person">Person</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#Organisation">Organisation</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -534,12 +557,14 @@ code {
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#hasLocation">hasLocation</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#SpatialLocation">SpatialLocation</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#isChangedBy">isChangedBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Event">Event</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#storedIn">storedIn</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#ControlledVocabulary">ControlledVocabulary</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#isAffectedBy">isAffectedBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Event">Event</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#requiresSecurityClassification">requiresSecurityClassification</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#SecurityClassification">SecurityClassification</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#softwareAssignedID">softwareAssignedID</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">some</span> <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#storedIn">storedIn</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#IntellectualControlSystem">IntellectualControlSystem</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#relatedTo">relatedTo</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Artefact">Artefact</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#isChangedBy">isChangedBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#InformationSystem">InformationSystem</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#hasQuality">hasQuality</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#PreservationQuality">PreservationQuality</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#relatedTo">relatedTo</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Artefact">Artefact</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#requiresControl">hasControl</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Control">Control</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasLocation">hasLocation</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#SpatialLocation">SpatialLocation</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -547,6 +572,150 @@ code {
                 <td>
                     <a href="#DigitalArtefact">DigitalArtefact</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#PhysicalArtefact">PhysicalArtefact</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ArtefactChangeEvent">
+        <h3>Artefact Change Event<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#ArtefactChangeEvent</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    An Artefact Change Event is an Event that results in a new version of an Artefact.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#Event">Event</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#affects">affects</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 2 <a href="#Artefact">Artefact</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#ArtefactSendEvent">ArtefactSendEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ArtefactControlEvent">
+        <h3>Artefact Control Event<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#ArtefactControlEvent</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    An Artefact Control Event is an Event that requires a particular level of access to an Artefact.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#Event">Event</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#requiresControl">hasControl</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Control">Control</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#ArtefactShareEvent">ArtefactShareEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#ArtefactPublishEvent">ArtefactPublishEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ArtefactPublishEvent">
+        <h3>Artefact Publish Event<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#ArtefactPublishEvent</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    An Artefact Publish Event is an Event that gives indiscriminate access to an Artefact to a set of Agents.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#ArtefactControlEvent">ArtefactControlEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ArtefactSendEvent">
+        <h3>Artefact Send Event<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#ArtefactSendEvent</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    An Artefact Send Event is an Event that results in a new version or a set of new versions of an Artefact at a target Agent or a set of target Agents.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#ArtefactChangeEvent">ArtefactChangeEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#hasTargetAgent">hasTargetAgent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1 <a href="#Agent">Agent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasSourceAgent">hasSourceAgent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="#Agent">Agent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ArtefactShareEvent">
+        <h3>Artefact Share Event<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#ArtefactShareEvent</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    An Artefact Share Event is an Event that gives access to an Artefact to an Agent or a defined set of Agents.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#ArtefactControlEvent">ArtefactControlEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#hasSourceAgent">hasSourceAgent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="#Agent">Agent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasTargetAgent">hasTargetAgent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1 <a href="#Agent">Agent</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -559,6 +728,12 @@ code {
                 <td><code>http://linked.data.gov.au/def/agrif#Association</code></td>
             </tr>
             <tr>
+                <th>Source</th>
+                <td>
+                    <a href="https://www.w3.org/TR/prov-o/#Association">https://www.w3.org/TR/prov-o/#Association</a>
+                </td>
+            </tr>
+            <tr>
                 <th>Description</th>
                 <td>
                     An Association is a qualified assignment of responsibility to an Agent in an Activity or Event, indicating that the Agent had a Role in the Activity.
@@ -569,27 +744,6 @@ code {
                 <td>
                     <a href="#associatedRole">associatedRole</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Role">Role</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#hasAgent">hasAgent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Agent">Agent</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="AuditEvent">
-        <h3>Audit Event<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/agrif#AuditEvent</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    An Audit Event is the systematic examination of a Record to ascertain how and where the Record is stored, who created it, or manages it, who uses it and how much longer the Record is required to be maintained.
-                </td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="#ControlEvent">ControlEvent</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -636,6 +790,34 @@ code {
             </tr>
         </table>
     </div>
+    <div class="entity class" id="Collection">
+        <h3>Collection<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#Collection</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A Collection is an aggregation of Artefact items.
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#hasPart">hasPart</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Artefact">Artefact</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#LogicalCollection">LogicalCollection</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#PhysicalCollection">PhysicalCollection</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity class" id="Control">
         <h3>Control<sup title="class" class="sup-c">c</sup></h3>
         <table>
@@ -654,43 +836,6 @@ code {
                 <td>
                     <a href="#AccessControl">AccessControl</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#SecurityControl">SecurityControl</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="ControlEvent">
-        <h3>Control Event<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/agrif#ControlEvent</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    A Control Event is an Event that requires a particular level of access to the Record.
-                </td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="#Event">Event</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>Restrictions</th>
-                <td>
-                    <a href="#requiresControl">hasControl</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Control">Control</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>Sub-classes</th>
-                <td>
-                    <a href="#AuditEvent">AuditEvent</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#SentencingEvent">SentencingEvent</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#ReplaceEvent">ReplaceEvent</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#DecisionEvent">DecisionEvent</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#DisposalEvent">DisposalEvent</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -717,7 +862,7 @@ code {
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#associatedFunction">associatedFunction</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1 <a href="#Function">Function</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#associatedFunction">associatedFunction</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Function">Function</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -738,15 +883,15 @@ code {
             <tr>
                 <th>Sub-classes</th>
                 <td>
+                    <a href="#JurisdictionalCoverage">JurisdictionalCoverage</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#TemporalCoverage">TemporalCoverage</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#SpatialCoverage">SpatialCoverage</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#JurisdictionalCoverage">JurisdictionalCoverage</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
     </div>
-    <div class="entity class" id="CreationEvent">
-        <h3>Creation Event<sup title="class" class="sup-c">c</sup></h3>
+    <div class="entity class" id="RecordCreationEvent">
+        <h3>Record Creation Event<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -755,7 +900,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A Creation Event is a Change Event that results in the creation of a Record.
+                    A Record Creation Event is an Event that results in the creation of a Record.
                 </td>
             </tr>
             <tr>
@@ -787,34 +932,6 @@ code {
             </tr>
         </table>
     </div>
-    <div class="entity class" id="DecisionEvent">
-        <h3>Decision Event<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/agrif#DecisionEvent</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    A Decision Event changes the Decision Status on the Control of a Record.
-                </td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="#ControlEvent">ControlEvent</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>Restrictions</th>
-                <td>
-                    <a href="#hasDecisionStatus">hasDecisionStatus</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#DecisionStatus">DecisionStatus</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#hasPrerequisiteDecisionEvent">hasPrerequisiteDecisionEvent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#DecisionEvent">DecisionEvent</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity class" id="DecisionStatus">
         <h3>Decision Status<sup title="class" class="sup-c">c</sup></h3>
         <table>
@@ -832,27 +949,6 @@ code {
                 <th>Super-classes</th>
                 <td>
                     <a href="#Status">Status</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="DestroyEvent">
-        <h3>Destroy Event<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/agrif#DestroyEvent</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    A Destroy Event is a Disposal Event that results in the regular authorised permanent desctruction of a Record that is no longer required for business purposes.
-                </td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="#DisposalEvent">DisposalEvent</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -880,8 +976,8 @@ code {
                 <th>Restrictions</th>
                 <td>
                     <a href="#format">format</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">some</span> <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#filesize">filesize</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">some</span> <a href="http://www.w3.org/2001/XMLSchema#long">xsd:long</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#filename">filename</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">some</span> <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#filesize">filesize</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">some</span> <a href="http://www.w3.org/2001/XMLSchema#long">xsd:long</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#storedIn">storedIn</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#InformationSystem">InformationSystem</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
@@ -956,41 +1052,18 @@ code {
             </tr>
         </table>
     </div>
-    <div class="entity class" id="DisposalEvent">
-        <h3>Disposal Event<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/agrif#DisposalEvent</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    A Disposal Event is an Event that results in the regular authorised destruction or change of custody of a Record that is no longer required for business purposes.
-                </td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="#ControlEvent">ControlEvent</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>Sub-classes</th>
-                <td>
-                    <a href="#TransferEvent">TransferEvent</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#FreezeEvent">FreezeEvent</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#DestroyEvent">DestroyEvent</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity class" id="Event">
         <h3>Event<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
                 <td><code>http://linked.data.gov.au/def/agrif#Event</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="https://www.w3.org/TR/prov-o/#InstantaneousEvent">https://www.w3.org/TR/prov-o/#InstantaneousEvent</a>
+                </td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1002,18 +1075,22 @@ code {
                 <th>Restrictions</th>
                 <td>
                     <a href="#guidingPolicy">guidingPolicy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Policy">Policy</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#wasAssociatedWith">wasAssociatedWith</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Agent">Agent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#qualifiedAssociation">qualifiedAssociation</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Association">Association</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#associatedFunction">associatedFunction</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Function">Function</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#priorEvent">priorEvent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Event">Event</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#triggeredBy">triggeredBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Trigger">Trigger</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#hasStatus">hasStatus</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Status">Status</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#wasAssociatedWith">wasAssociatedWith</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Agent">Agent</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#associatedFunction">associatedFunction</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Function">Function</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#qualifiedAssociation">qualifiedAssociation</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Association">Association</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#affects">affects</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> (<a href="#Artefact">Artefact</a><sup class="sup-c" title="class">c</sup> or <a href="#Record">Record</a><sup class="sup-c" title="class">c</sup>)<br/>
                 </td>
             </tr>
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#ControlEvent">ControlEvent</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#CreationEvent">CreationEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#RecordControlEvent">RecordControlEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#RecordCreationEvent">CreationEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#ArtefactChangeEvent">ArtefactChangeEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#ArtefactControlEvent">ArtefactControlEvent</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1033,27 +1110,6 @@ code {
             </tr>
         </table>
     </div>
-    <div class="entity class" id="FreezeEvent">
-        <h3>Freeze Event<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/agrif#FreezeEvent</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    A Freeze Event is a Disposal Event that leads to a records disposal freeze or retention notice in support of compliance requirements or an identified need to suspend the Archives' records destruction permissions.
-                </td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="#DisposalEvent">DisposalEvent</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity class" id="Function">
         <h3>Function<sup title="class" class="sup-c">c</sup></h3>
         <table>
@@ -1064,7 +1120,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A Function is a process that is performed routinely to carry out a part of the mandate of an Australian Government Agency.
+                    A Function reflects the responsibilities of an Organisation that can be delegated through official channels. [Commonwealth Records Series Manual]
                 </td>
             </tr>
             <tr>
@@ -1213,6 +1269,27 @@ code {
             </tr>
         </table>
     </div>
+    <div class="entity class" id="LogicalCollection">
+        <h3>Logical Collection<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#LogicalCollection</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A Logical Collection is an aggregation of Artefact items that are stored within one physical file.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#Collection">Collection</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity class" id="MaintainActivity">
         <h3>Maintain Activity<sup title="class" class="sup-c">c</sup></h3>
         <table>
@@ -1290,6 +1367,12 @@ code {
                 <td><code>http://linked.data.gov.au/def/agrif#Organisation</code></td>
             </tr>
             <tr>
+                <th>Source</th>
+                <td>
+                    <a href="https://www.w3.org/TR/prov-o/#Organization">https://www.w3.org/TR/prov-o/#Organization</a>
+                </td>
+            </tr>
+            <tr>
                 <th>Description</th>
                 <td>
                     An Organisation is a type of Agent that denotes a social or legal institution such as a government agency, a corporation, society, etc.
@@ -1337,7 +1420,7 @@ code {
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#partOf">partOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Organisation">Organisation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#partOf">partOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Organisation">Organisation</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1350,9 +1433,15 @@ code {
                 <td><code>http://linked.data.gov.au/def/agrif#Permission</code></td>
             </tr>
             <tr>
+                <th>Source</th>
+                <td>
+                    Australian Government Recordkeeping Metadata Standard
+                </td>
+            </tr>
+            <tr>
                 <th>Description</th>
                 <td>
-                    A Permission denotes the Security Clearance of an Agent that determines its access and use rights to Records.
+                    A Permission denotes the Security Clearance of an Agent that determines its access and use rights.
                 </td>
             </tr>
         </table>
@@ -1363,6 +1452,12 @@ code {
             <tr>
                 <th>IRI</th>
                 <td><code>http://linked.data.gov.au/def/agrif#Person</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="https://www.w3.org/TR/prov-o/#Person">https://www.w3.org/TR/prov-o/#Person</a>
+                </td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1406,7 +1501,28 @@ code {
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#hasFormFactor">hasFormFactor</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#FormFactor">FormFactor</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasFormFactor">hasFormFactor</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#FormFactor">FormFactor</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="PhysicalCollection">
+        <h3>Physical Collection<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#PhysicalCollection</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A Physical Collection is an aggregation of Artefact items that are stored in separate physical files.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#Collection">Collection</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1440,6 +1556,12 @@ code {
                 <td><code>http://linked.data.gov.au/def/agrif#Policy</code></td>
             </tr>
             <tr>
+                <th>Source</th>
+                <td>
+                    <a href="http://purl.org/dc/terms/Policy">dcterms:Policy</a>
+                </td>
+            </tr>
+            <tr>
                 <th>Description</th>
                 <td>
                     A Policy is a deliberate system of principles to guide decisions and achieve rational outcomes.
@@ -1448,11 +1570,11 @@ code {
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#MinimumMetadataSetPolicy">MinimumMetadataSetPolicy</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#DigitalPreservationPolicy">DigitalPreservationPolicy</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#RecordsAuthorityDisposalClassPolicy">RecordsAuthorityPolicy</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#InformationManagementPolicy">InformationManagementPolicy</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#MinimumMetadataSetPolicy">MinimumMetadataSetPolicy</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#RecordsAuthorityDisposalClassPolicy">RecordsAuthorityPolicy</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#RecordStorageStandard">RecordStorageStandard</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#DigitalPreservationPolicy">DigitalPreservationPolicy</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1515,22 +1637,228 @@ code {
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#requiresControl">hasControl</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Control">Control</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#recordOf">recordOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1 <a href="#Artefact">Artefact</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasClassifier">hasClassifier</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Classifier">Classifier</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#qualifiedAssociation">qualifiedAssociation</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Association">Association</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#requiresSecurityClassification">requiresSecurityClassification</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#SecurityClassification">SecurityClassification</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#isChangedBy">isChangedBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Event">Event</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#hasSeries">hasSeries</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Series">Series</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#relatedTo">relatedTo</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Record">Record</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#hasActivity">hasActivity</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Activity">Activity</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#isChangedBy">isChangedBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="#CreationEvent">CreationEvent</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#hasDisposalClass">hasDisposalClass</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="#DisposalClass">DisposalClass</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#requiresControl">hasControl</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Control">Control</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#associatedFunction">associatedFunction</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1 <a href="#Function">Function</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#checksum">checksum</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#recordOf">recordOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 1 <a href="#Artefact">Artefact</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasDisposalClass">hasDisposalClass</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="#DisposalClass">DisposalClass</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#isAffectedBy">isAffectedBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="#RecordCreationEvent">CreationEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#isAffectedBy">isAffectedBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Event">Event</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#hasCoverage">hasCoverage</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Coverage">Coverage</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#requiresSecurityClassification">requiresSecurityClassification</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#SecurityClassification">SecurityClassification</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#checksum">checksum</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">max</span> 1<br/>
+                    <a href="#hasSeries">hasSeries</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Series">Series</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#relatedTo">relatedTo</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Record">Record</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasActivity">hasActivity</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Activity">Activity</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#replaces">replaces</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Record">Record</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#hasStatus">hasStatus</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Status">Status</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#hasClassifier">hasClassifier</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Classifier">Classifier</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="RecordAuditEvent">
+        <h3>Record Audit Event<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#RecordAuditEvent</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    An Record Audit Event is the systematic examination of a Record to ascertain how and where the Record is stored, who created it, or manages it, who uses it and how much longer the Record is required to be maintained.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#RecordControlEvent">RecordControlEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="RecordControlEvent">
+        <h3>Record Control Event<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#RecordControlEvent</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A Record Control Event is an Event that requires a particular level of access to the Record.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#Event">Event</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#requiresControl">hasControl</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Control">Control</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#RecordDecisionEvent">RecordDecisionEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#RecordAuditEvent">RecordAuditEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#RecordReplacementEvent">RecordReplacementEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#RecordDisposalEvent">RecordDisposalEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#RecordSentencingEvent">RecordSentencingEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="RecordDecisionEvent">
+        <h3>Record Decision Event<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#RecordDecisionEvent</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A Record Decision Event changes the Decision Status on the Control of a Record.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#RecordControlEvent">RecordControlEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#hasDecisionStatus">hasDecisionStatus</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#DecisionStatus">DecisionStatus</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#prerequisiteDecisionEvent">hasPrerequisiteDecisionEvent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#RecordDecisionEvent">RecordDecisionEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="RecordDestructionEvent">
+        <h3>Record Destruction Event<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#RecordDestructionEvent</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A Record Destruction Event is a Disposal Event that results in the regular authorised permanent desctruction of a Record that is no longer required for business purposes.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#RecordDisposalEvent">RecordDisposalEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="RecordDisposalEvent">
+        <h3>Record Disposal Event<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#RecordDisposalEvent</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A Record Disposal Event is an Event that results in the regular authorised destruction or change of custody of a Record that is no longer required for business purposes.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#RecordControlEvent">RecordControlEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#RecordFreezeEvent">RecordFreezeEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#RecordDestructionEvent">RecordDestructionEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#RecordTransferEvent">RecordTransferEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="RecordFreezeEvent">
+        <h3>Record Freeze Event<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#RecordFreezeEvent</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A Record Freeze Event is a Disposal Event that leads to a records disposal freeze or retention notice in support of compliance requirements or an identified need to suspend the Archives' records destruction permissions.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#RecordDisposalEvent">RecordDisposalEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="RecordReplacementEvent">
+        <h3>Record Replacement Event<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#RecordReplacementEvent</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A Record Replacement Event is an Event that results in the replacement of a Record with a new version. Edits to a Record constitute a Replace Event.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#RecordControlEvent">RecordControlEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#replacedBy">replacedBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="#Record">Record</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasVersionHistory">hasVersionHistory</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#VersionHistory">VersionHistory</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="RecordSentencingEvent">
+        <h3>Record Sentencing Event<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#RecordSentencingEvent</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A Record Sentencing Event is an Event that classifies an Agencies Record to a specific class of a Records Authority Disposal Class Policy. This helps determine the Records value and how it should be managed throughout its lifecycle.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#RecordControlEvent">RecordControlEvent</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1552,6 +1880,41 @@ code {
                 <th>Super-classes</th>
                 <td>
                     <a href="#Policy">Policy</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="RecordTransferEvent">
+        <h3>Record Transfer Event<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#RecordTransferEvent</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A Transfer Event is a Disposal Event that results in a change of custody.
+                </td>
+            </tr>
+            <tr>
+                <th>Example</th>
+                <td>
+                    An example of a Record Transfer Event is the transfer of a Record from an Agency to the National Archives. Section 27 of the Archives Act 1983 requires Australian government agencies to transfer Records to the Archives within 15 years of their creation.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#RecordDisposalEvent">RecordDisposalEvent</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="#hasManifest">hasManifest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#Manifest">Manifest</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#transferredFrom">transferredFrom</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Role">Role</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#transferredTo">transferredTo</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Role">Role</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1585,6 +1948,12 @@ code {
                 <td><code>http://linked.data.gov.au/def/agrif#RecordsAuthorityPolicy</code></td>
             </tr>
             <tr>
+                <th>Source</th>
+                <td>
+                    Australian Government Recordkeeping Metadata Standard
+                </td>
+            </tr>
+            <tr>
                 <th>Description</th>
                 <td>
                     A Records Authority Disposal Class Policy is a Policy that identifies the specific disposal class that authorises the retention or destruction of a Record.
@@ -1599,7 +1968,7 @@ code {
             <tr>
                 <th>Restrictions</th>
                 <td>
-                    <a href="#hasDisposalClass">hasDisposalClass</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">only</span> <a href="#DisposalClass">DisposalClass</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#hasDisposalClass">hasDisposalClass</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="#DisposalClass">DisposalClass</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
             <tr>
@@ -1610,40 +1979,18 @@ code {
             </tr>
         </table>
     </div>
-    <div class="entity class" id="ReplaceEvent">
-        <h3>Replace Event<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/agrif#ReplaceEvent</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    A Replace Event is an Event that results in the replacement of a Record with a new version. Edits to a Record constitute a Replace Event.
-                </td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="#ControlEvent">ControlEvent</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>Restrictions</th>
-                <td>
-                    <a href="#replacedBy">replacedBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">exactly</span> 1 <a href="#Record">Record</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#hasVersionHistory">hasVersionHistory</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#VersionHistory">VersionHistory</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity class" id="Role">
         <h3>Role<sup title="class" class="sup-c">c</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
                 <td><code>http://linked.data.gov.au/def/agrif#Role</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="https://www.w3.org/TR/prov-o/#Role">https://www.w3.org/TR/prov-o/#Role</a>
+                </td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1660,10 +2007,10 @@ code {
             <tr>
                 <th>Sub-classes</th>
                 <td>
-                    <a href="#BusinessOwner">BusinessOwner</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#Creator">Creator</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#User">User</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#BusinessOwner">BusinessOwner</a><sup class="sup-c" title="class">c</sup><br/>
                     <a href="#Administrator">Administrator</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#User">User</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1674,6 +2021,12 @@ code {
             <tr>
                 <th>IRI</th>
                 <td><code>http://linked.data.gov.au/def/agrif#SecurityClassification</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    Australian Government Recordkeeping Metadata Standard
+                </td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -1706,27 +2059,6 @@ code {
                 <th>Super-classes</th>
                 <td>
                     <a href="#Control">Control</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="entity class" id="SentencingEvent">
-        <h3>Sentencing Event<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/agrif#SentencingEvent</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    A Sentencing Event is an Event that classifies an Agencies Record to a specific class of a Records Authority Policy. This helps determine the Records value and how it should be managed throughout its lifecycle.
-                </td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="#ControlEvent">ControlEvent</a><sup class="sup-c" title="class">c</sup><br/>
                 </td>
             </tr>
         </table>
@@ -1869,43 +2201,6 @@ code {
             </tr>
         </table>
     </div>
-    <div class="entity class" id="TransferEvent">
-        <h3>Transfer Event<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://linked.data.gov.au/def/agrif#TransferEvent</code></td>
-            </tr>
-            <tr>
-                <th>Description</th>
-                <td>
-                    A Transfer Event is a Disposal Event that results in a change of custody.
-                </td>
-            </tr>
-            <tr>
-                <th>Example</th>
-                <td>
-                    An example of a Transfer Event is the transfer of a Record from an Agency to the National Archives. Section 27 of the Archives Act 1983 requires Australian government agencies to transfer Records to the Archives within 15 years of their creation.
-                </td>
-            </tr>
-            <tr>
-                <th>Super-classes</th>
-                <td>
-                    <a href="#DisposalEvent">DisposalEvent</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-            <tr>
-                <th>Restrictions</th>
-                <td>
-                    <a href="#transferredFrom">transferredFrom</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Role">Role</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#transferredFrom">transferredFrom</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#BusinessOwner">BusinessOwner</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#hasManifest">hasManifest</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Manifest">Manifest</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#transferredTo">transferredTo</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#Role">Role</a><sup class="sup-c" title="class">c</sup><br/>
-                    <a href="#transferredTo">transferredTo</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="#BusinessOwner">BusinessOwner</a><sup class="sup-c" title="class">c</sup><br/>
-                </td>
-            </tr>
-        </table>
-    </div>
     <div class="entity class" id="Trigger">
         <h3>Trigger<sup title="class" class="sup-c">c</sup></h3>
         <table>
@@ -1969,21 +2264,13 @@ code {
             </tr>
         </table>
     </div>
-    <div class="entity class" id="VocabularyEncodingScheme">
-        <h3>VocabularyEncodingScheme<sup title="class" class="sup-c">c</sup></h3>
-        <table>
-            <tr>
-                <th>IRI</th>
-                <td><code>http://purl.org/dc/dcam/VocabularyEncodingScheme</code></td>
-            </tr>
-        </table>
-    </div>
 </section>
 <section id="objectproperties">
     <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
         <li><a href="#accessedBy">accessed By</a></li>
         <li><a href="#actsAs">acts As</a></li>
+        <li><a href="#affects">affects</a></li>
         <li><a href="#associatedFunction">associated Function</a></li>
         <li><a href="#associatedRole">associated Role</a></li>
         <li><a href="#guidingPolicy">guiding Policy</a></li>
@@ -1997,17 +2284,28 @@ code {
         <li><a href="#hasFormFactor">has Form Factor</a></li>
         <li><a href="#hasLocation">has Location</a></li>
         <li><a href="#hasManifest">has Manifest</a></li>
+        <li><a href="#hasNextVersion">has Next Version</a></li>
         <li><a href="#hasPart">has Part</a></li>
         <li><a href="#hasPermission">has Permission</a></li>
-        <li><a href="#hasPrerequisiteDecisionEvent">has Prerequisite Decision Event</a></li>
+        <li><a href="#prerequisiteDecisionEvent">prerequisite Decision Event</a></li>
+        <li><a href="#hasPreviousVersion">has Previous Version</a></li>
         <li><a href="#hasQuality">has Quality</a></li>
         <li><a href="#hasSeries">has Series</a></li>
+        <li><a href="#hasSourceAgent">has Source Agent</a></li>
         <li><a href="#hasStatus">has Status</a></li>
+        <li><a href="#hasTargetAgent">has Target Agent</a></li>
         <li><a href="#hasVersionHistory">has Version History</a></li>
+        <li><a href="#isAffectedBy">is Affected By</a></li>
+        <li><a href="#isAttachedTo">is Attached To</a></li>
+        <li><a href="#isBasedOn">is Based On</a></li>
         <li><a href="#isChangedBy">is Changed By</a></li>
+        <li><a href="#isDuplicateOf">is Duplicate Of</a></li>
+        <li><a href="#isMentionedIn">is Mentioned In</a></li>
+        <li><a href="#isPartOf">is Part Of</a></li>
         <li><a href="#notifies">notifies</a></li>
         <li><a href="#partOf">part Of</a></li>
         <li><a href="#positionIn">position In</a></li>
+        <li><a href="#priorEvent">prior Event</a></li>
         <li><a href="#qualifiedAssociation">qualified Association</a></li>
         <li><a href="#recordOf">record Of</a></li>
         <li><a href="#relatedTo">related To</a></li>
@@ -2059,6 +2357,27 @@ code {
             </tr>
         </table>
     </div>
+    <div class="entity property" id="affects">
+        <h3>affects<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#affects</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A relation between an Event and an Artefact or a Record.
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#isAffectedBy">isAffectedBy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity property" id="associatedFunction">
         <h3>associated Function<sup title="object property" class="sup-op">op</sup></h3>
         <table>
@@ -2080,6 +2399,12 @@ code {
             <tr>
                 <th>IRI</th>
                 <td><code>http://linked.data.gov.au/def/agrif#associatedRole</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="https://www.w3.org/TR/prov-o/#hadRole">https://www.w3.org/TR/prov-o/#hadRole</a>
+                </td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -2112,6 +2437,12 @@ code {
                 <td><code>http://linked.data.gov.au/def/agrif#hasActivity</code></td>
             </tr>
             <tr>
+                <th>Source</th>
+                <td>
+                    <a href="https://www.w3.org/TR/prov-o/#p_activity">https://www.w3.org/TR/prov-o/#p_activity</a>
+                </td>
+            </tr>
+            <tr>
                 <th>Description</th>
                 <td>
                     A relation between a Record and an Activity that acts upon the Record.
@@ -2131,6 +2462,12 @@ code {
             <tr>
                 <th>IRI</th>
                 <td><code>http://linked.data.gov.au/def/agrif#hasAgent</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="https://www.w3.org/TR/prov-o/#p_agent">https://www.w3.org/TR/prov-o/#p_agent</a>
+                </td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -2260,6 +2597,33 @@ code {
             </tr>
         </table>
     </div>
+    <div class="entity property" id="hasNextVersion">
+        <h3>has Next Version<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#hasNextVersion</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A relation that indicates that an Artefact has a newer version.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#relatedTo">relatedTo</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#hasPreviousVersion">hasPreviousVersion</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity property" id="hasPart">
         <h3>has Part<sup title="object property" class="sup-op">op</sup></h3>
         <table>
@@ -2270,7 +2634,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A relation that defines part-whole relations amongst Organisational Units.
+                    A relation that defines part-whole relations.
                 </td>
             </tr>
             <tr>
@@ -2296,8 +2660,8 @@ code {
             </tr>
         </table>
     </div>
-    <div class="entity property" id="hasPrerequisiteDecisionEvent">
-        <h3>has Prerequisite Decision Event<sup title="object property" class="sup-op">op</sup></h3>
+    <div class="entity property" id="prerequisiteDecisionEvent">
+        <h3>prerequisite Decision Event<sup title="object property" class="sup-op">op</sup></h3>
         <table>
             <tr>
                 <th>IRI</th>
@@ -2307,6 +2671,33 @@ code {
                 <th>Description</th>
                 <td>
                     A relation between a Decision Event and a prerequisite Decision Event, indicating a Decision chain in a Chain of Command.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#priorEvent">priorEvent</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasPreviousVersion">
+        <h3>has Previous Version<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#hasPreviousVersion</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A relation that indicates that an Artefact has an older version.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#relatedTo">relatedTo</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
         </table>
@@ -2347,6 +2738,27 @@ code {
             </tr>
         </table>
     </div>
+    <div class="entity property" id="hasSourceAgent">
+        <h3>has Source Agent<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#hasSourceAgent</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A relation that denotes the source Agent of a Record or an Artefact in an Event or Activity.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#wasAssociatedWith">wasAssociatedWith</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity property" id="hasStatus">
         <h3>has Status<sup title="object property" class="sup-op">op</sup></h3>
         <table>
@@ -2358,6 +2770,27 @@ code {
                 <th>Description</th>
                 <td>
                     A relation between an Activity and a Status that indicates its current state.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasTargetAgent">
+        <h3>has Target Agent<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#hasTargetAgent</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A relation that denotes the target Agent of a Record or an Artefact in an Event or Activity.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#wasAssociatedWith">wasAssociatedWith</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
         </table>
@@ -2377,6 +2810,69 @@ code {
             </tr>
         </table>
     </div>
+    <div class="entity property" id="isAffectedBy">
+        <h3>is Affected By<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#isAffectedBy</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A relation between an Artefact or a Record and an Event.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#topObjectProperty">owl:topObjectProperty</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isAttachedTo">
+        <h3>is Attached To<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#isAttachedTo</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A relation that indicates that an Artefact is logically or physically attached to another Artefact.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#relatedTo">relatedTo</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isBasedOn">
+        <h3>is Based On<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#isBasedOn</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A relation that indicates that an Artefact is in part or as a whole based on another Artefact.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#relatedTo">relatedTo</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
     <div class="entity property" id="isChangedBy">
         <h3>is Changed By<sup title="object property" class="sup-op">op</sup></h3>
         <table>
@@ -2387,13 +2883,64 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A relation between an Artefact or a Record and a Change Event.
+                    A relation that denotes the Information System that has been used to change an Artefact.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isDuplicateOf">
+        <h3>is Duplicate Of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#isDuplicateOf</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A relation that indicates that an Artefact is an exact copy of another Artefact, i.e. the content is exactly the same, but its Record may be different.
                 </td>
             </tr>
             <tr>
                 <th>Super-properties</th>
                 <td>
-                    <a href="http://www.w3.org/2002/07/owl#topObjectProperty">owl:topObjectProperty</a>
+                    <a href="#relatedTo">relatedTo</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isMentionedIn">
+        <h3>is Mentioned In<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#isMentionedIn</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A relation that indicates that an Artefact is mentioned in another Artefact. An example of such a relation is a citation of a document in another document.
+                </td>
+            </tr>
+            <tr>
+                <th>Super-properties</th>
+                <td>
+                    <a href="#relatedTo">relatedTo</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isPartOf">
+        <h3>is Part Of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#isPartOf</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A Collection in which the described Artefact is physically or logically included.
                 </td>
             </tr>
         </table>
@@ -2423,7 +2970,7 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A relation that defines part-whole relations amongst Organisational Units.
+                    A relation that defines part-whole relations.
                 </td>
             </tr>
         </table>
@@ -2439,6 +2986,21 @@ code {
                 <th>Description</th>
                 <td>
                     A relation that defines the position an Agent occupies in an Organisation or Organisational Unit.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="priorEvent">
+        <h3>prior Event<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#priorEvent</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A relation indicating some causal link between an Event and a previously happening Event.
                 </td>
             </tr>
         </table>
@@ -2627,7 +3189,13 @@ code {
             <tr>
                 <th>Description</th>
                 <td>
-                    A relation that indicates that a Change Event has been initiated by a Trigger.
+                    A relation that indicates that an Event has been initiated by a Trigger.
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="#triggers">triggers</a><sup class="sup-op" title="object property">op</sup>
                 </td>
             </tr>
         </table>
@@ -2670,9 +3238,15 @@ code {
                 <td><code>http://linked.data.gov.au/def/agrif#wasAssociatedWith</code></td>
             </tr>
             <tr>
+                <th>Source</th>
+                <td>
+                    <a href="https://www.w3.org/TR/prov-o/#wasAssociatedWith">https://www.w3.org/TR/prov-o/#wasAssociatedWith</a>
+                </td>
+            </tr>
+            <tr>
                 <th>Description</th>
                 <td>
-                    A relation that assigns responsibility of an Agent for an Activity or Change Event.
+                    A relation that assigns responsibility of an Agent with an Activity or Event.
                 </td>
             </tr>
         </table>
@@ -2689,6 +3263,8 @@ code {
         <li><a href="#filesize">filesize</a></li>
         <li><a href="#format">format</a></li>
         <li><a href="#seriesNumber">seriesNumber</a></li>
+        <li><a href="#softwareAssignedID">softwareAssignedID</a></li>
+        <li><a href="#startedAtTime">startedAtTime</a></li>
     </ul>
     <div class="entity property" id="checksum">
         <h3>checksum<sup title="datatype property" class="sup-dp">dp</sup></h3>
@@ -2696,6 +3272,12 @@ code {
             <tr>
                 <th>IRI</th>
                 <td><code>http://linked.data.gov.au/def/agrif#checksum</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A checksum is a small-sized datum derived from a block of digital data representing a Record for the purpose of detecting errors during the transfer or storage of a Record.
+                </td>
             </tr>
             <tr>
                 <th>Range(s)</th>
@@ -2732,6 +3314,12 @@ code {
             <tr>
                 <th>IRI</th>
                 <td><code>http://linked.data.gov.au/def/agrif#endedAtTime</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="https://www.w3.org/TR/prov-o/#endedAtTime">https://www.w3.org/TR/prov-o/#endedAtTime</a>
+                </td>
             </tr>
             <tr>
                 <th>Description</th>
@@ -2785,6 +3373,12 @@ code {
                 <td><code>http://linked.data.gov.au/def/agrif#format</code></td>
             </tr>
             <tr>
+                <th>Source</th>
+                <td>
+                    <a href="http://purl.org/dc/elements/1.1/format">http://purl.org/dc/elements/1.1/format</a>
+                </td>
+            </tr>
+            <tr>
                 <th>Description</th>
                 <td>
                     The file format, physical medium, or dimensions of the resource.
@@ -2813,14 +3407,74 @@ code {
             </tr>
         </table>
     </div>
+    <div class="entity property" id="softwareAssignedID">
+        <h3>softwareAssignedID<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#softwareAssignedID</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A softwareAssignedID is an identifier given to an Artefact by an Information System.
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="startedAtTime">
+        <h3>startedAtTime<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://linked.data.gov.au/def/agrif#startedAtTime</code></td>
+            </tr>
+            <tr>
+                <th>Source</th>
+                <td>
+                    <a href="https://www.w3.org/TR/prov-o/#startedAtTime">https://www.w3.org/TR/prov-o/#startedAtTime</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The time at which and Activity started
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
 </section>
 
 <section id="annotationproperties">
     <h2>Annotation Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <ul class="hlist">
+        <li><a href="#contributor">contributor</a></li>
         <li><a href="#source">source</a></li>
         <li><a href="#example">example</a></li>
+        <li><a href="#identifier">identifier</a></li>
+        <li><a href="#name">name</a></li>
     </ul>
+    <div class="entity property" id="contributor">
+        <h3>contributor<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://purl.org/dc/terms/contributor</code></td>
+            </tr>
+        </table>
+    </div>
     <div class="entity property" id="source">
         <h3>source<sup title="annotation property" class="sup-ap">ap</sup></h3>
         <table>
@@ -2839,8 +3493,315 @@ code {
             </tr>
         </table>
     </div>
+    <div class="entity property" id="identifier">
+        <h3>identifier<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://schema.org/identifier</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="name">
+        <h3>name<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://schema.org/name</code></td>
+            </tr>
+        </table>
+    </div>
 </section>
-
+<section id="namedindividuals">
+    <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#Active">Active</a></li>
+        <li><a href="#Approved">Approved</a></li>
+        <li><a href="#AwaitingDisposal">AwaitingDisposal</a></li>
+        <li><a href="#Completed">Completed</a></li>
+        <li><a href="#Confidential">Confidential</a></li>
+        <li><a href="#Disapproved">Disapproved</a></li>
+        <li><a href="#Disposed">Disposed</a></li>
+        <li><a href="#HighlyProtected">Highly Protected</a></li>
+        <li><a href="#Protected">Protected</a></li>
+        <li><a href="#Redundant">Redundant</a></li>
+        <li><a href="#RetainAsNationalArchives">RetainAsNationalArchives</a></li>
+        <li><a href="#Secret">Secret</a></li>
+        <li><a href="#TopSecret(NV)">Top Secret (NV)</a></li>
+        <li><a href="#TopSecret(PV)">Top Secret (PV)</a></li>
+        <li><a href="#Unclassified">Unclassified</a></li>
+    </ul>
+    <div class="entity named_individual" id="Active">
+        <h3>Active<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      http://linked.data.gov.au/def/agrif#Active
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://linked.data.gov.au/def/agrif#Status">Status</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Approved">
+        <h3>Approved<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      http://linked.data.gov.au/def/agrif#Approved
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://linked.data.gov.au/def/agrif#DecisionStatus">DecisionStatus</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="AwaitingDisposal">
+        <h3>AwaitingDisposal<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      http://linked.data.gov.au/def/agrif#AwaitingDisposal
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://linked.data.gov.au/def/agrif#Status">Status</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Completed">
+        <h3>Completed<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      http://linked.data.gov.au/def/agrif#Completed
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://linked.data.gov.au/def/agrif#Status">Status</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Confidential">
+        <h3>Confidential<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      http://linked.data.gov.au/def/agrif#Confidential
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://linked.data.gov.au/def/agrif#SecurityClassification">SecurityClassification</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Disapproved">
+        <h3>Disapproved<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      http://linked.data.gov.au/def/agrif#Disapproved
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://linked.data.gov.au/def/agrif#DecisionStatus">DecisionStatus</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Disposed">
+        <h3>Disposed<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      http://linked.data.gov.au/def/agrif#Disposed
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://linked.data.gov.au/def/agrif#Status">Status</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="HighlyProtected">
+        <h3>Highly Protected<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      http://linked.data.gov.au/def/agrif#HighlyProtected
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://linked.data.gov.au/def/agrif#SecurityClassification">SecurityClassification</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Protected">
+        <h3>Protected<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      http://linked.data.gov.au/def/agrif#Protected
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://linked.data.gov.au/def/agrif#SecurityClassification">SecurityClassification</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Redundant">
+        <h3>Redundant<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      http://linked.data.gov.au/def/agrif#Redundant
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://linked.data.gov.au/def/agrif#Status">Status</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="RetainAsNationalArchives">
+        <h3>RetainAsNationalArchives<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      http://linked.data.gov.au/def/agrif#RetainAsNationalArchives
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://linked.data.gov.au/def/agrif#DisposalClass">DisposalClass</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Secret">
+        <h3>Secret<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      http://linked.data.gov.au/def/agrif#Secret
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://linked.data.gov.au/def/agrif#SecurityClassification">SecurityClassification</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="TopSecret(NV)">
+        <h3>Top Secret (NV)<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      http://linked.data.gov.au/def/agrif#TopSecretNV
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://linked.data.gov.au/def/agrif#SecurityClassification">SecurityClassification</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="TopSecret(PV)">
+        <h3>Top Secret (PV)<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      http://linked.data.gov.au/def/agrif#TopSecretPV
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://linked.data.gov.au/def/agrif#SecurityClassification">SecurityClassification</a><br/>
+            </dd>
+        </table>
+    </div>
+    <div class="entity named_individual" id="Unclassified">
+        <h3>Unclassified<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      http://linked.data.gov.au/def/agrif#Unclassified
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://linked.data.gov.au/def/agrif#SecurityClassification">SecurityClassification</a><br/>
+            </dd>
+        </table>
+    </div>
+</section>
 <section id="namespaces">
     <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
     <dl>
@@ -2850,12 +3811,8 @@ code {
         <dd><code>http://linked.data.gov.au/def/agrif#</code></dd>
         <dt>dcterms</dt>
         <dd><code>http://purl.org/dc/terms/</code></dd>
-        <dt>doap</dt>
-        <dd><code>http://usefulinc.com/ns/doap#</code></dd>
         <dt>owl</dt>
         <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
-        <dt>prov</dt>
-        <dd><code>http://www.w3.org/ns/prov#</code></dd>
         <dt>rdf</dt>
         <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
         <dt>rdfs</dt>
