@@ -39,7 +39,8 @@
                                        rdfs:seeAlso <https://github.com/agldwg/agrif-ont> ;
                                        dcterms:created "2016-12-06"^^xsd:date .
 
-<http://orcid.org/0000-0003-3425-0780> ,
+<http://orcid.org/0000-0003-3425-0780>
+  a sdo:Person ;
   sdo:name "Armin Haller" ;
   sdo:identifier <http://orcid.org/0000-0003-3425-0780> ;
   sdo:email "armin.haller@anu.edu.au"^^xsd:anyURI ;
